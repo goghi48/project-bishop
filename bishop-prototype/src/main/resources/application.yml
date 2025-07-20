@@ -1,0 +1,31 @@
+server:
+    port: 8082
+
+weyland:
+    audit:
+        enabled: true
+        destination: console # console/kafka
+
+management:
+    endpoints:
+        web.exposure.include: health,info,metrics,prometheus
+    metrics:
+        tags:
+            application: bishop
+    prometheus:
+        metrics:
+            export:
+                enabled: true
+
+
+spring:
+    kafka:
+        bootstrap-servers: localhost:9092
+        consumer:
+            group-id: weyland-yutani
+            auto-offset-reset: earliest
+
+app:
+    kafka:
+        topic: audit-topic
+
