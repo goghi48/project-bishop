@@ -1,10 +1,9 @@
-# Weather Application
+# Project Bishop
 
 ## Вход в Grafana
 | Логин | Пароль |
 | ----- | ------ |
 | admin | admin  |
-
 
 ## Требования
 
